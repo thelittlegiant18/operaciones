@@ -1,20 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Operaciones Basicas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="ion-padding">
+  <h3>Operaciones</h3>
+    <ion-item>
+      <ion-label>Dato # 1:</ion-label>
+      <ion-input [(ngModel)]="numero1" type="number" aria-placeholder="Digite el primer número:"></ion-input>      
+    </ion-item>
+    <ion-item>
+      <ion-label>Dato # 1:</ion-label>
+      <ion-input [(ngModel)]="numero2" type="number" aria-placeholder="Digite el segundo número:"></ion-input>
+    </ion-item>
+    <ion-button (click)="sumaNumero()" color="secondary" expand="block">Sumar</ion-button>
+    <ion-card-header>
+      Resultado:
+    </ion-card-header>
+    <ion-card-content>
+      <p>La suma de los valores ingresados es: {{Suma}}</p>
+    </ion-card-content>
 </ion-content>
